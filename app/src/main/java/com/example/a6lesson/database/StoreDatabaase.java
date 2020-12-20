@@ -13,6 +13,8 @@ public class StoreDatabaase  extends SQLiteOpenHelper {
     public static final String COLOUMN_USER_NAME = "username";
     public static final String COLOUMN_USER_EMAIL = "user_email";
     public static final String COLOUMN_USER_PASSWORD = "user_password";
+    public static final String COLOUMN_USER_PHONE_NUMBER = "user_number";
+    public static final String COLOUMN_USER_CITY = "user_city";
 
     Context context;
 
@@ -27,6 +29,8 @@ public class StoreDatabaase  extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + TABLE_USERS + "("+
                 COLOUMN_USER_NAME + "TEXT, " +
                 COLOUMN_USER_EMAIL + "TEXT, " +
+                COLOUMN_USER_PHONE_NUMBER + "TEXT, " +
+                COLOUMN_USER_CITY + "TEXT, " +
                 COLOUMN_USER_PASSWORD + "TEXT) ");
     }
 
