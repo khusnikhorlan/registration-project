@@ -36,6 +36,7 @@ public class registration extends AppCompatActivity implements View.OnClickListe
     Button btn_login;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,14 @@ public class registration extends AppCompatActivity implements View.OnClickListe
         btn_submit = findViewById(R.id.btn_submit);
         btn_login = findViewById(R.id.btn_login);
 
+
         btn_login.setOnClickListener(this);
+        btn_submit.setOnClickListener(this);
+
+
+
+
+        /*
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +79,8 @@ public class registration extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
             }
         });
+
+         */
 
     }
 

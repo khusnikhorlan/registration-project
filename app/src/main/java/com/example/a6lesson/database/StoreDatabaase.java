@@ -27,16 +27,18 @@ public class StoreDatabaase  extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE " + TABLE_USERS + "("+
-                COLOUMN_USER_NAME + "TEXT, " +
-                COLOUMN_USER_EMAIL + "TEXT, " +
-                COLOUMN_USER_PHONE_NUMBER + "TEXT, " +
-                COLOUMN_USER_CITY + "TEXT, " +
-                COLOUMN_USER_PASSWORD + "TEXT) ");
+                COLOUMN_USER_NAME + " TEXT, " +
+                COLOUMN_USER_EMAIL + " TEXT, " +
+                COLOUMN_USER_PHONE_NUMBER + " TEXT, " +
+                COLOUMN_USER_CITY + " TEXT, " +
+                COLOUMN_USER_PASSWORD + " TEXT) ");
+
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
+        db.execSQL(" DROP TABLE IF EXISTS " + TABLE_USERS);
 
         onCreate(db);
     }

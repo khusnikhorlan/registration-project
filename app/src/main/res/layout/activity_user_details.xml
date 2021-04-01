@@ -76,48 +76,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/email"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="22dp"
         android:layout_toRightOf="@+id/number"
         android:text="********"
-        android:textSize="30sp"
         android:textColor="@color/black"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rela"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
         android:layout_toRightOf="@+id/name"
         android:text="Username"
-        android:textSize="30sp"
         android:textColor="@color/black"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/useremail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
         android:layout_toRightOf="@+id/email"
         android:text="UserEmail"
-        android:textSize="30sp"
         android:textColor="@color/black"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/usercity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/number"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="18dp"
         android:layout_toRightOf="@+id/email"
         android:text="UserCity"
-        android:textSize="30sp"
         android:textColor="@color/black"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

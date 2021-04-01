@@ -29,6 +29,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText et_email;
     EditText et_password;
     Button btn_submit;
+    Button btn_password;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +43,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
         btn_submit = findViewById(R.id.btn_submit);
+        btn_password = findViewById(R.id.btn_password);
 
         btn_submit.setOnClickListener(this);
+        btn_password.setOnClickListener(this);
     }
 
     @Override
@@ -58,13 +62,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
+
+
         Cursor userCursor = sqdb.rawQuery("SELECT * FROM " + TABLE_USERS +
-                  "WHERE " + COLOUMN_USER_EMAIL+ " =? AND " +COLOUMN_USER_PASSWORD + " =? ",
+                  " WHERE " + COLOUMN_USER_EMAIL+ " =? AND " +COLOUMN_USER_PASSWORD + " =? ",
+
                   new String[]{et_email.getText().toString(), et_password.getText().toString()} );
+
+
+
         if (((userCursor != null) && (userCursor.getCount() > 0))) {
             userCursor.moveToFirst();
             String userName = userCursor.getString(userCursor.getColumnIndex(COLOUMN_USER_NAME));
             Toast.makeText(this, "User tabyldy! Welcome"+userName, Toast.LENGTH_SHORT).show();
+
+            Intent i = new Intent(LoginActivity.this, user_details.class);
+            i.putExtra("et_email", et_email.getText().toString());
+
+            startActivity(i);
 
         }else{
             Toast.makeText(this, "Invalid User", Toast.LENGTH_SHORT).show();
